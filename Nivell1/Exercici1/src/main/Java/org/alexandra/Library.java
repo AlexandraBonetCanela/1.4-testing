@@ -1,6 +1,7 @@
 package org.alexandra;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Library {
 
@@ -28,9 +29,15 @@ public class Library {
         } else {
             System.out.println("Book already saved in the library");
         }
+        sortLibraryBooks();
     }
 
     public void removeLibraryBook(String libraryBook) {
         libraryBooks.remove(libraryBook);
+        sortLibraryBooks();
+    }
+
+    public void sortLibraryBooks() {
+        Collections.sort(libraryBooks);
     }
  }
